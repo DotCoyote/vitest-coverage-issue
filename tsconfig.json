@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": [
+    "src/types/next-env.d.ts",
+    "src/types/process.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "jsx": "preserve",
+    "types": [
+      "@testing-library/jest-dom",
+      "vitest/globals",
+      "vite/client"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "strictNullChecks": true,
+    "plugins": [{ "name": "next" }]
+  },
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "plugins": [
+    {
+      "name": "next"
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    ".next"
+  ]
+}
